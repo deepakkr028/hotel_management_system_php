@@ -1,232 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php           
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Hotel Management System </title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/droup.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+     <style type="text/css">
+      body{
+          background-color:peachpuff;
+        background-image:url("img/b.jpg");
+      }       
+     </style>
+</head>
+
+<?php           
         require("include/header.php");               
         
     ?>
+
+
+
+
+
 <body>
 
-      <?php           
+  <?php           
         require("include/navbar.php");               
         
       ?>
 
-      <!--jambotron-->
-      <div class="jumbotron"  style="background-image:url('img/garden2.jpg');">
-        <div class="container">
-          <div id="head" class="animated fadeInLeft">
-            <h1 align="center"><b>HOTEL MANAGEMENT SYSTEM</b></h1>
-            </div>
-            
-          </div>
-            
-     </div> 
-     <!--jambotron end-->
+  <!--navbar -->
+
+  <div class="topnav" id="myTopnav">
+    <a href="index.php" class="active">HOTEL MANAGEMENT SYSTEM</a>
+    <a href="index.php">HOME</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="bms.php">BOOKING</a>
+    <a href="contact.php">CONTACT US </a>
+
+    <a href="aboutus.html">ABOUT US</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
 
 
+  <!--navbar responsive js script -->
 
-    <!----slider----->
-    <div class="slider" style="margin-top: -45px; border: radius 5px;">
-          <div class="container my-4">
-          
-              <hr class="my-4">
-          
-              <!--Carousel Wrapper-->
-            <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
-                <!--Slides-->
-                <div class="carousel-inner" role="listbox">
-                  <div class="carousel-item active">
-                    <img class="d-block w-100" src="img/beds.jpg" alt="First slide" style="height: 570px;">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="img/b2.jfif" alt="Second slide" style="height:570px">
-                  </div>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+  <!--navbar responsive js script end-->
 
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="img/garden2.jpg" alt="Third slide" style="height:570px">
-                  </div>
+  <!--navbar end -->
 
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="img/photo1.jpg" alt="Third slide" style="height:570px">
-                  </div>
-
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="img/coffe1.jpg" alt="Third slide" style="height:570px">
-                  </div>
-
-               </div>
-                <!--/.Slides-->
-                <!--Controls-->
-                <a class="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carousel-thumb" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-                <!--/.Controls-->
-                <ol class="carousel-indicators">
-                  <li data-target="#carousel-thumb" data-slide-to="0" class="active"> <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg"
-                      class="img-fluid"></li>
-                  <li data-target="#carousel-thumb" data-slide-to="1"><img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg"
-                      class="img-fluid"></li>
-                  <li data-target="#carousel-thumb" data-slide-to="2"><img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg"
-                      class="img-fluid"></li>
-                </ol>
-              </div>
-              <!--/.Carousel Wrapper-->
-          
-           </div>
+  <!--jambotron-->
+  <div class="jumbotron" style="background-image:url('img/garden2.jpg');">
+    <div class="container">
+      <div id="head" class="animated fadeInLeft">
+        <h1 align="center"><b>HOTEL MANAGEMENT SYSTEM</b></h1>
       </div>
 
-         <!--slider  end-->
-
-
-
-
-     <div class="container" style="background-color: springgreen;width:auto; height: 170px; border-radius:2% ;">
-      <h2 >BOOK YOUR ROOM NOW </h2>
-         <div id="f1" >
-            <form action="r1.php" method="get">
-           <div class="table-responsive">
-            <center><table>
-                <tr>
-                            <th width="20%" height="50px"><center> DESTINATION </center> </th>
-                            <th width="20%" height="50px"><center> CHEK IN DATE </center></th>
-                            <th width="20%" height="50px"><center> CHEK OUT DATE </center></th>
-                            <th width="20%" height="50px"><center> ROOM </center></th>
-                            <td rowspan="80%" style:"widh:56%">
-                            <td rowspan="2"><input type="submit" value="Book Now" name="sub"></td>
-                          
-                </tr>
-                <tr>
-                
-                    <td width="20%" height="50px"><center><input type="text" name="d1" placeholder="Enter Destination"></center></td>
-                    <td width="20%" height="50px"><center><input type="date" name="ci"></center></td>
-                    <td width="20%" height="50px"><center><input type="date" name="co"></center></td>
-                    <td width="20%" height="50px">
-                        <center><select name="room">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select></center>
-                    </td>
-                </tr>
-            </table></center>
-
-          </div>
-        </form>
-        </div>
     </div>
 
+  </div>
+  <!--jambotron end-->
 
 
 
-    <section>
-         <div class="container-fluid" style="background-color:lightgoldenrodyellow;"> 
+  <!----slider----->
+  <div class="slider" style="margin-top: -45px; border: radius 5px;">
+    <div class="container my-4">
 
-           <h2 style="margin-top: 12px; background-color: lightslategray; border-radius: 6px;"> HOTEL ACCODIMATION</h2>
+      <hr class="my-4">
 
-        <div class="row" style="margin-top:0px; margin-bottom:0px;">
-         <div class="col-md-4">
-           <div class="thumbnail">
-             <a href="img/">
-               <img src="img/n3.jpg" alt="" style="width:100% ; height: 230px;">
-               <div class="caption">
-                 <p>  </p>
-               </div>
-             </a>
-           </div>
-         </div>
-         <div class="col-md-4">
-           <div class="thumbnail">
-             <a href="img/bed.jpg">
-               <img src="img/bed.jpg" alt="" style="width:100% ; height:230px" >
-               <div class="caption">
-                 <p>  </p>
-               </div>
-             </a>
-           </div>
-         </div>
-         <div class="col-md-4">
-           <div class="thumbnail">
-             <a href="img/photo3.jpg">
-               <img src="img/photo3.jpg" alt="" style="width:100%; height:230px">
-               <div class="caption">
-                 <p></p>
-               </div>
-             </a>
-           </div>
-         </div>
-       </div>
+      <!--Carousel Wrapper-->
+      <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="img/beds.jpg" alt="First slide" style="height: 570px;">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="img/b2.jfif" alt="Second slide" style="height:570px">
+          </div>
+
+          <div class="carousel-item">
+            <img class="d-block w-100" src="img/garden2.jpg" alt="Third slide" style="height:570px">
+          </div>
+
+          <div class="carousel-item">
+            <img class="d-block w-100" src="img/photo1.jpg" alt="Third slide" style="height:570px">
+          </div>
+
+          <div class="carousel-item">
+            <img class="d-block w-100" src="img/coffe1.jpg" alt="Third slide" style="height:570px">
+          </div>
+
+        </div>
+        <!--/.Slides-->
+        <!--Controls-->
+        <a class="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel-thumb" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+        <!--/.Controls-->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-thumb" data-slide-to="0" class="active"> <img class="d-block w-100"
+              src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg" class="img-fluid"></li>
+          <li data-target="#carousel-thumb" data-slide-to="1"><img class="d-block w-100"
+              src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg" class="img-fluid"></li>
+          <li data-target="#carousel-thumb" data-slide-to="2"><img class="d-block w-100"
+              src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg" class="img-fluid"></li>
+        </ol>
       </div>
+      <!--/.Carousel Wrapper-->
 
-</section>
+    </div>
+  </div>
+
+  <!--slider  end-->
+
+
+
+
+  <div class="container" style="background-color: springgreen;width:auto; height: 170px; border-radius:2% ;">
+    <h2>BOOK YOUR ROOM NOW </h2>
+    <div id="f1">
+      <form action="r1.php" method="get">
+        <div class="table-responsive">
+          <center>
+            <table>
+              <tr>
+                <th width="20%" height="50px">
+                  <center> DESTINATION </center>
+                </th>
+                <th width="20%" height="50px">
+                  <center> CHEK IN DATE </center>
+                </th>
+                <th width="20%" height="50px">
+                  <center> CHEK OUT DATE </center>
+                </th>
+                <th width="20%" height="50px">
+                  <center> ROOM </center>
+                </th>
+                <td rowspan="80%" style:"widh:56%">
+                <td rowspan="2"><input type="submit" value="Book Now" name="sub"></td>
+
+              </tr>
+              <tr>
+
+                <td width="20%" height="50px">
+                  <center><input type="text" name="d1" placeholder="Enter Destination"></center>
+                </td>
+                <td width="20%" height="50px">
+                  <center><input type="date" name="ci"></center>
+                </td>
+                <td width="20%" height="50px">
+                  <center><input type="date" name="co"></center>
+                </td>
+                <td width="20%" height="50px">
+                  <center><select name="room">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select></center>
+                </td>
+              </tr>
+            </table>
+          </center>
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+
+  <section>
+    <div class="container-fluid" style="background-color:lightgoldenrodyellow;">
+
+      <h2 style="margin-top: 12px; background-color: lightslategray; border-radius: 6px;"> HOTEL ACCODIMATION</h2>
+
+      <div class="row" style="margin-top:0px; margin-bottom:0px;">
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="img/">
+              <img src="img/n3.jpg" alt="" style="width:100% ; height: 230px;">
+              <div class="caption">
+                <p> </p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="img/bed.jpg">
+              <img src="img/bed.jpg" alt="" style="width:100% ; height:230px">
+              <div class="caption">
+                <p> </p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="img/photo3.jpg">
+              <img src="img/photo3.jpg" alt="" style="width:100%; height:230px">
+              <div class="caption">
+                <p></p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
 
 
   <!--================ Facilities Area  =================-->
-        <section class="facilities_area section_gap">
-            <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">  
-            </div>
-            <div class="container">
-                <div class="section_title text-center">
-                    <h2 class="title_w" style="margin-top: 20px;">FACILITIES</h2>
-                    <p></p>
-                </div>
-                <div class="row mb_30">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-dinner"></i>Restaurant</h4>
-                            <img src="img/rect.jpg" alt="" STYLE="width:270PX; HEIGHT:200px ; border-radius:5%; ">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-bicycle"></i>Sports CLub</h4>
-                            <img src="img/sport.jpg" alt="" STYLE="width:270PX; HEIGHT:200px ; border-radius:5%; ">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-shirt"></i>Swimming Pool</h4>
-                            <img src="img/sp2.jpg" alt="" STYLE="width:270PX; HEIGHT:1250 ; border-radius:5%; ">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-car"></i>Rent a Car</h4>
-                            <img src="img/car.jpg" alt="" STYLE="width:270PX; HEIGHT:1250 ; border-radius:5%; ">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-construction"></i>Gymnesium</h4>
-                            <img src="img/gym.jpg" alt="" STYLE="width:270PX; HEIGHT:1250 ; border-radius:5%; ">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-coffee-cup"></i>Bar</h4>
-                            <img src="img/desi.jpg" alt="" STYLE="width:270PX; HEIGHT:1250 ; border-radius:5%; ">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-       <!--================ Facilities Area  =================-->
+  <section class="facilities_area section_gap">
+    <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">
+    </div>
+    <div class="container">
+      <div class="section_title text-center">
+        <h2 class="title_w" style="margin-top: 20px;">FACILITIES</h2>
+        <p></p>
+      </div>
+      <div class="row mb_30">
+        <div class="col-lg-4 col-md-6">
+          <div class="facilities_item">
+            <h4 class="sec_h4"><i class="lnr lnr-dinner"></i>Restaurant</h4>
+            <img src="img/rect.jpg" alt="" STYLE="width:270PX; HEIGHT:200px ; border-radius:5%; ">
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="facilities_item">
+            <h4 class="sec_h4"><i class="lnr lnr-bicycle"></i>Sports CLub</h4>
+            <img src="img/sport.jpg" alt="" STYLE="width:270PX; HEIGHT:200px ; border-radius:5%; ">
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="facilities_item">
+            <h4 class="sec_h4"><i class="lnr lnr-shirt"></i>Swimming Pool</h4>
+            <img src="img/sp2.jpg" alt="" STYLE="width:270PX; HEIGHT:1250 ; border-radius:5%; ">
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="facilities_item">
+            <h4 class="sec_h4"><i class="lnr lnr-car"></i>Rent a Car</h4>
+            <img src="img/car.jpg" alt="" STYLE="width:270PX; HEIGHT:1250 ; border-radius:5%; ">
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="facilities_item">
+            <h4 class="sec_h4"><i class="lnr lnr-construction"></i>Gymnesium</h4>
+            <img src="img/gym.jpg" alt="" STYLE="width:270PX; HEIGHT:1250 ; border-radius:5%; ">
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="facilities_item">
+            <h4 class="sec_h4"><i class="lnr lnr-coffee-cup"></i>Bar</h4>
+            <img src="img/desi.jpg" alt="" STYLE="width:270PX; HEIGHT:1250 ; border-radius:5%; ">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================ Facilities Area  =================-->
 
   <!--================ footer Area  =================-->
-       <?php 
+
+
+  <footer class="footer_style">
+    <main class="container-fluid">
+      <div class="row p-3">
+        <div class="col-md-4 col-12 offset-md-1">
+          <p class="mt-5 text-justify"> Developed by Deepak Kumar </p>
+          <p class="text-capitalize"> @copyright All right reserved. </p>
+
+        </div>
+
+        <div class="col-md-4 col-12">
+          <h4>Contacts</h4>
+          <dl>
+            <dt>Address:</dt>
+            <dd> JAMMU , JAMMU AND KASHMIR </dd>
+          </dl>
+          <dl>
+            <dt>email:</dt>
+            <dd><a href="#">dk881011@gmail.com</a></dd>
+          </dl>
+          <dl>
+            <dt>phones:</dt>
+            <dd><a href="#">+91 8716902999</a> <span>or</span> <a href="#">+91 XXXXXXXXXX</a>
+            </dd>
+          </dl>
+        </div>
+
+        <div class="col-md-2 col-12">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="index.php">HOME</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="bms.php">BOOKING</a></li>
+            <li><a href="contact.php">CONTACT US</a></li>
+            <li><a href="aboutus.html">ABOUT US</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="d-flex flex-row justify-content-center align-items-center flex-wrap">
+        <div class="p-md-5 p-2 flex-fill ">
+          <a href=""> <i class="fa fa-facebook-official" aria-hidden="true"></i> <span>Facebook</span> </a>
+        </div>
+
+        <div class="p-md-5 p-2 flex-fill "><a href="https://www.instagram.com/_deepak_kumar24/"><i
+              class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a></div>
+
+        <div class="p-md-5 p-2 flex-fill "><a href="#"><i class="fa fa-twitter"
+              aria-hidden="true"></i><span>Twitter</span></a></div>
+
+        <div class="p-md-5 p-2 flex-fill "><a href="https://www.youtube.com/channel/UCrNQR5qU0y6Y2e8k4i4jwNQ"><i
+              class="fa fa-youtube" aria-hidden="true"></i><span>Youtube</span></a></div>
+
+      </div>
+    </main>
+  </footer>
+
+  <?php 
           
           require("include/footer.php");
                   
           
       ?>
 
-  <!--================ footer Area closed =================-->  
- 
+  <!--================ footer Area closed =================-->
+
 </body>
+
 </html>
